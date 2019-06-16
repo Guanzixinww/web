@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>demo</title>
+		<style type="text/css">
+			.top{
+				width:1200px;
+				height:190px;
+				margin:0 auto;
+			}
+			.topp{
+				width:690px;
+				height:40px;
+				float:right;
+			}
+			.topp1{
+				display:inline;
+				font-size:12.93px;
+				color:#929191;
+				position:relative;
+				top:10px;
+			}
+			a{
+				color:#878586;
+				text-decoration:none;
+			}
+			.topp2{
+				font-size:14.78px;
+				position:relative;
+				top:10px;
+				left:20px;
+			}
+			select[name=dingdan]{
+				position:relative;
+				top:11px;
+				left:55px;
+				border:0px;
+				font-size:14.78px;
+				color:#878586;
+			}
+			select[name=mymaicai]{
+				border:0px;
+				font-size:14.78px;
+				color:#878586;
+				position:relative;
+				top:11px;
+				left:65px;
+			}
+			.topp3{
+				width:25px;
+				height:10px;
+				float:right;
+				position:relative;
+				right:280px;
+				top:15px;
+				background-color:white;
+				background-image:url(image/小三角.png);
+				background-repeat:no-repeat;
+				background-position:15px;
+			}
+			.topp4{
+				width:25px;
+				height:10px;
+				float:right;
+				position:relative;
+				right:160px;
+				top:15px;
+				background-color:white;
+				background-image:url(image/小三角.png);
+				background-repeat:no-repeat;
+				background-position:15px;;
+			}
+			.topp5{
+				position:relative;
+				top:9px;
+				left:90px;
+			}
+			.topp6{
+				position:relative;
+				top:10px;
+				left:140px;
+			}
+			.topp7{
+				position:relative;
+				top:10px;
+				left:147px;
+			}
+			.top2{
+				width:1200px;
+				height:100px;
+				position:relative;
+				top:25px;
+			}
+			.logo{
+				display:inline;
+				position:relative;
+				top:40px;
+			}
+			input[name=search]{
+				width:540px;
+				height:45px;
+				border:1px black solid;
+				color:#dddddd;
+				position:relative;
+				left:400px;
+				top:-13px;
+				text-align:center;
+				line-height:45px;
+				font-size:14.78px;
+			}
+			input[name=sub]{
+				width:60px;
+				height:48px;
+				background-color:white;
+				border:1px solid black;
+				position:relative;
+				top:-14px;
+				left:395px;
+				background-image:url(image/search.png);
+				background-repeat:no-repeat;
+				background-position:center center;
+			}
+			.cart{
+				display:inline;
+				float:right;
+			}
+			select[name=sort]{
+				position:relative;
+				top:45px;
+				width:140px;
+				height:40px;
+				border:0px;
+				line-height:40px;
+				text-align:center;
+			}
+			.top31{
+				background-color:white;
+				position:relative;
+				top:45px;
+				left:-45px;
+				background-image:url(image/小三角.png);
+				background-repeat:no-repeat;
+				background-position:0 center;
+			}
+			li{
+				list-style-type:none;
+			}
+			.nav{
+				width:113px;
+				height:40px;
+				display:inline-block;
+				position:relative;
+				top:-11px;
+				left:100px;
+				text-align:center;
+				line-height:40px;
+			}
+			.nav>a{
+				color:black;
+			}
+			.nav>a:hover{
+				color:#71bb79;
+			}
+			.nav:hover{
+				border-bottom:#3aa747 5px solid;
+			}
+			.bodyimage{
+				border-top:5px #3aa747 solid;
+				border-bottom:1px #7f7f7f solid;
+				margin:0 auto;
+				background-image:url(image/banner.png);
+				background-repeat:no-repeat;
+				background-position:center center;
+			}
+			.body{
+				width:1200px;
+				height:1020px;
+				margin:0 auto;
+			}
+			.body1{
+				width:1200px;
+				height:60px;
+				line-height:60px;
+				text-indent:2em;
+			}
+			.body1>a{
+				color:black;
+				font-size:18px;
+			}
+			.bodyi1{
+				font-size:14px;
+				color:#929191;
+			}
+			.bodyi2{
+				font-size:14px;
+				color:#8d8d8d;
+				float:right;
+			}
+			.body2{
+				width:1200px;
+				height:140px;
+			}
+			.ul1{
+				width:1158px;
+				height:45px;
+				border:1px solid #cccccc;
+				position:relative;
+				top:-15px;
+			}
+			.fli{
+				width:100px;
+				height:45px;
+				color:black;
+				display:inline-block;
+				background-color:#e5e5e5;
+				float:left;
+				text-align:center;
+				line-height:45px;
+				position:relative;
+				left:-40px;
+			}
+			.fli>a{
+				color:black;
+			}
+			.bli{
+				width:122px;
+				height:45px;
+				line-height:45px;
+				text-align:center;
+				display:inline-block;
+				float:left;
+				position:relative;
+				left:-40px;
+			}
+			.bli>a{
+				color:#8b8b8b;
+			}
+			.bli>a:hover{
+				color:#8fc794;
+			}
+			.ul2{
+				width:1158px;
+				height:45px;
+				border:1px solid #cccccc;
+				position:relative;
+				top:-32px;
+			}
+			.ul3{
+				width:1158px;
+				height:45px;
+				border:1px solid #cccccc;
+				position:relative;
+				top:-48px;
+			}
+			.bli2>a{
+				color:#7f7f7f;
+			}
+			.bli2>a:hover{
+				color:#8fc794;
+			}
+			.bli2{
+				width:122px;
+				height:45px;
+				line-height:45px;
+				text-align:center;
+				display:inline-block;
+				float:right;
+			}
+			.body4{
+				width:1200px;
+				height:820px;
+			}
+			.goods{
+				width:270px;
+				height:290px;
+				background-repeat:no-repeat;
+				border:1px solid #888888;
+				float:left;
+				margin:12px;
+			}
+			.blackg{
+				width:270px;
+				height:50px;
+				border:1px solid black;
+				position:relative;
+				top:240px;
+				background-color:black;
+				opacity:0.7;
+				text-align:center;
+				color:white;
+				font-size:22.14px;
+			}
+			.goods:hover .blackg{
+				width:270px;
+				height:290px;
+				background-color:black;
+				opacity:0.7;
+				text-align:center;
+				color:white;
+				font-size:22.14px;
+				position:relative;
+				top:0px;
+				left:0px;
+			}
+			.blackgp{
+				display:inline-block;
+				font-size:14.83px;
+				position:relative;
+				top:-7px;
+				color:white;
+			}
+			.goods:hover .blackgp{
+				display:inline-block;
+				font-size:22.14px;
+				position:relative;
+				top:95px;
+				color:white;
+			}
+			.blackgp1{
+				display:inline-block;
+				position:relative;
+				top:-35px;
+				font-size:14.83px;
+				color:white;
+			}
+			.goods:hover .blackgp1{
+				display:inline-block;
+				position:relative;
+				top:70px;
+				font-size:22.14px;
+				color:white;
+			}
+			.bottom1{
+				height:100px;
+				background-color:#f5f5f5;
+			}
+			.bottom11{
+				height:100px;
+				width:1200px;
+				margin:0 auto;
+			}
+			.bottom1 img{
+				display:inline;
+				position:relative;
+				left:35px;
+				top:25px;
+			}
+			.bota{
+				width:285px;
+				height:100px;
+				float:left;
+			}
+			.bota1{
+				display:inline;
+				font-size:19px;
+				color:#484848;
+				position:relative;
+				left:50px;
+			}
+			.bota2{
+				display:inline;
+				color:#484848;
+				position:relative;
+				left:100px;
+			}
+			.kuang{
+				width:285px;
+				height:50px;
+				float:left;
+				border-right:2px #e0e0e0 solid;
+				position:relative;
+				top:-50px;
+			}
+			.bottom2{
+				height:100px;
+				background-color:#323232;					
+			}
+			.bottom22{
+				width:1200px;
+				height:100px;
+				margin:0 auto;
+			}
+			.botb1{
+				color:#f5f5f5;
+				font-size:14px;
+				position:relative;
+				top:30px;
+				text-align:center;
+			}
+			.botb2{
+				color:#f5f5f5;
+				font-size:14px;
+				position:relative;
+				top:35px;
+				text-align:center;
+			}
+			.float{
+				position:fixed;
+				top:190px;
+				right:0px;
+				float:right;
+			}
+			.float1{
+				width:80px;
+				height:100px;
+				background-color:black;
+				background-repeat:no-repeat;
+				background-position:center center;
+				text-align:center;
+				background-image:url(image/cart1.png);
+			}
+			.float2{
+				width:65px;
+				height:100px;
+				border-bottom:2px solid #595e5d;
+				position:relative;
+				left:7.5px;
+			}
+		</style>
+	</head>
+	<body>
+		<form action="#" method="get">
+			<div class="top">
+				<div class="topp">
+					<p class="topp1">嘿，欢迎来买猜商城！</p>
+					<a href="#" class="topp2">请登录</a> &nbsp;&nbsp;&nbsp;
+					<a href="#" class="topp2">免费注册</a>
+					<select name="dingdan">
+						<option value="dingdan" selected>我的订单</option>
+						<option value="1">1</option>
+					</select>
+					<span class="topp3">
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					</span>
+					<select name="mymaicai">
+						<option value="maicai" selected>我的买猜</option>
+						<option value="1">1</option>
+					</select>
+					<span class="topp4">
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					</span>
+					<a href="#" class="topp5">帮助中心</a>
+					<a href="#" class="topp6"><img src="image/wb.png" alt="wb"/></a>
+					<a href="#" class="topp7"><img src="image/wx.png"/></a>
+				</div>
+				<div class="top2">
+					<img src="image/logo.png" alt="logo" class="logo"/>
+					<input type="text" name="search" value="请输入搜索内容"/>
+					<input type="submit" name="sub" value="&nbsp;&nbsp;&nbsp;"/>
+					<img src="image/cart.png" alt="cart" class="cart"/>
+				</div>
+				<div class="top3">
+					<select name="sort">
+						<option value="mysort" selected>&nbsp;&nbsp;全部商品分类</option>
+						<option value="mysort1">1</option>
+					</select>
+					<span class="top31">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+					<ul>
+						<li class="nav"><a href="#">首页</a></li>
+						<li class="nav"><a href="#">名酒</a></li>
+						<li class="nav"><a href="#">茗茶</a></li>
+						<li class="nav"><a href="#">玉石</a></li>
+						<li class="nav"><a href="#">休闲食品</a></li>
+						<li class="nav"><a href="#">洗护用品</a></li>
+						<li class="nav"><a href="#">土特产</a></li>
+						<li class="nav"><a href="#">积分商城</a></li>
+						<li class="nav"><a href="#">抽奖游戏</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="bodyimage">
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+			</div>
+			<div class="body">
+				<div class="body1">
+					<a href="#">首 &nbsp;页</a><span class="bodyi1">&nbsp;&nbsp;&nbsp;&nbsp;> &nbsp;&nbsp;玉石</span>
+					<span class="bodyi2">共200件相关商品</span>
+				</div>
+				<div class="body2">
+					<ul class="ul1">
+						<li class="fli"><a href="#">玉石</a></li>
+						<li class="bli"><a href="#">白玉</a></li>
+						<li class="bli"><a href="#">碧玉</a></li>
+						<li class="bli"><a href="#">黄玉</a></li>
+						<li class="bli"><a href="#">和田玉</a></li>
+						<li class="bli"><a href="#">翡翠</a></li>
+						<li class="bli"><a href="#">绿松玉</a></li>
+						<li class="bli"><a href="#">墨玉</a></li>
+					</ul>
+					<ul class="ul2">
+						<li class="fli"><a href="#">其他</a></li>
+						<li class="bli"><a href="#">吊坠</a></li>
+						<li class="bli"><a href="#">扳指</a></li>
+						<li class="bli"><a href="#">手镯</a></li>
+					</ul>
+					<ul class="ul3">
+						<li class="fli"><a href="#">地区</a></li>
+						<li class="bli"><a href="#">北京</a></li>
+						<li class="bli"><a href="#">安徽</a></li>
+						<li class="bli"><a href="#">福建</a></li>
+						<li class="bli"><a href="#">内蒙古</a></li>
+						<li class="bli"><a href="#">宁夏</a></li>
+						<li class="bli"><a href="#">黑龙江 </a></li>
+						<li class="bli"><a href="#">河北</a></li>
+						<li class="bli2"><a href="#">更多</a></li>
+					</ul>
+				</div>
+				<div class="body4">
+					<div class="goods" style="background-image:url(image/img1.png)">
+						<div class="blackg">
+								<p class="blackgp">竞猜价：&nbsp;&nbsp;¥ &nbsp;&nbsp;&nbsp;399.00</p><br/>
+								<p class="blackgp1">翡翠千手观音吊坠</p>
+						</div>	
+					</div>
+					<div class="goods" style="background-image:url(image/img2.png);background-position:40px;">
+						<div class="blackg">
+								<p class="blackgp">竞猜价：&nbsp;&nbsp;¥ &nbsp;&nbsp;&nbsp;1980.00</p><br/>
+								<p class="blackgp1">翡翠龙凤吊坠</p>
+						</div>	
+					</div>
+					<div class="goods" style="background-image:url(image/img3.png);background-position:center 50px;">
+						<div class="blackg">
+								<p class="blackgp">竞猜价：&nbsp;&nbsp;¥ &nbsp;&nbsp;&nbsp;199.00</p><br/>
+								<p class="blackgp1">翡翠花蕊吊坠</p>
+						</div>	
+					</div>
+					<div class="goods" style="background-image:url(image/img4.png);background-position:40px 48px;">
+						<div class="blackg">
+								<p class="blackgp">竞猜价：&nbsp;&nbsp;¥ &nbsp;&nbsp;&nbsp;199.00</p><br/>
+								<p class="blackgp1">翡翠如意吊坠</p>
+						</div>	
+					</div>
+					<div class="goods" style="background-image:url(image/img5.png);background-position:center 35px;">
+						<div class="blackg">
+								<p class="blackgp">竞猜价：&nbsp;&nbsp;¥ &nbsp;&nbsp;&nbsp;99.00</p><br/>
+								<p class="blackgp1">翡翠婵吊坠</p>
+						</div>	
+					</div>
+					<div class="goods" style="background-image:url(image/img6.png);background-position:20px 35px;">
+						<div class="blackg">
+								<p class="blackgp">竞猜价：&nbsp;&nbsp;¥ &nbsp;&nbsp;&nbsp;99.00</p><br/>
+								<p class="blackgp1">翡翠观音(浅色)吊坠</p>
+						</div>	
+					</div>
+					<div class="goods" style="background-image:url(image/img7.png);background-position:center 43px;">
+						<div class="blackg">
+								<p class="blackgp">竞猜价：&nbsp;&nbsp;¥ &nbsp;&nbsp;&nbsp;199.00</p><br/>
+								<p class="blackgp1">翡翠平安扣(深色)吊坠</p>
+						</div>	
+					</div>
+					<div class="goods" style="background-image:url(image/img8.png);background-position:center 47px;">
+						<div class="blackg">
+								<p class="blackgp">竞猜价：&nbsp;&nbsp;¥ &nbsp;&nbsp;&nbsp;199.00</p><br/>
+								<p class="blackgp1">翡翠如意吊坠</p>
+						</div>	
+					</div>
+				</div>
+			</div>
+			<div class="bottom1">
+				<div class="bottom11">
+					<div class="bota">
+						<img src="image/f1.png">
+						<p class="bota1">资质认证</p><br/>
+						<p class="bota2">服务商100%实名认证</p>
+						<div class="kuang">
+							&nbsp;
+						</div>
+					</div>
+					<div class="bota">
+						<img src="image/f2.png">
+						<p class="bota1">支付安全</p><br/>
+						<p class="bota2">明码标价支付及信息安全</p>
+						<div class="kuang">
+							&nbsp;
+						</div>
+					</div>
+					<div class="bota">
+						<img src="image/f3.png">
+						<p class="bota1">保险赔付</p><br/>
+						<p class="bota2">为您提供担保赔付</p>
+						<div class="kuang">
+							&nbsp;
+						</div>
+					</div>
+					<div class="bota">
+						<img src="image/f4.png">
+						<p class="bota1">售后无忧</p><br/>
+						<p class="bota2">服务出问题经理全程跟进</p>
+					</div>
+				</div>
+			</div>
+			<div class="bottom2">
+				<div class="bottom22">
+					<p class="botb1">首页 &nbsp;&nbsp;  | &nbsp;&nbsp;  工商代理 &nbsp;&nbsp;  | &nbsp;&nbsp;  财务代记账 &nbsp;&nbsp;  | &nbsp;&nbsp;  股权交易与变更  &nbsp;&nbsp; |  &nbsp;&nbsp; 企业贷款  &nbsp;&nbsp; |  &nbsp;&nbsp; 办公室租赁 &nbsp;&nbsp;  | &nbsp;&nbsp;  社保公积金代理 &nbsp;&nbsp;  |  &nbsp;&nbsp; 法律服务  </p>
+					<p class="botb2">© 2017-2018 买猜商城有限公司 版权所有</p>
+				</div>
+			</div>
+		</form>
+		<ul class="float">
+				<a href="#"><li class="float1"><div class="float2"></div></li></a>
+				<a href="#"><li class="float1"  style="background-image:url(image/qq.png)"><div class="float2"></div></li></a>
+				<a href="#"><li class="float1" style="background-image:url(image/zuji.png)"><div class="float2"></div></li></a>
+				<a href="#"><li class="float1" style="background-image:url(image/erweima.png)"><div class="float2"></div></li></a>
+				<a href="#"><li class="float1" style="background-image:url(image/gotop.png)"><div class="float2" style="border-bottom:0px;"></div></li></a>	
+		</ul>
+	</body>
+</html>
