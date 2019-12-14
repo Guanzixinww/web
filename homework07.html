@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>07</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		ul{
+			list-style:none;
+		}
+		li{
+			list-style:none;
+		}
+		.box{
+			width:1200px;
+			height:380px;
+			overflow:hidden;
+			position:relative;
+			margin:0 auto;
+		}
+		.slider{
+			width:8400px;
+			position:absolute;
+			left:-1200px;
+		}
+		.slide{
+			width:1200px;
+			float:left;
+			overflow:hidden;
+		}
+		.box>span{
+			display:block;
+			width:30px;
+			height:50px;
+			cursor:pointer;
+			text-align:center;
+			top:175px;
+			line-height:50px;
+			background-color:red;
+			font-size:30px;
+			position:absolute;
+			opacity:0;
+		}
+		#left{
+			left:30px;
+			color:white;
+			opacity:0;
+		}
+		#right{
+			right:30px;
+			color:white;
+			opacity:0;
+		}
+		.nav{
+			position:absolute;
+			left:500px;
+			bottom:20px;
+		}
+		.nav>li{
+			width:20px;
+			height:20px;
+			float:left;
+			background-color:#ccc;
+			cursor:pointer;
+			margin:0 10px;
+			border-radius:50%;
+			color:red;
+			text-align:center;
+			font-size:0.8em;
+			line-height:20px;
+		}
+		.nav .active{
+			background-color:red;
+			color:white;
+		}
+		#top{
+			margin:10px 0;
+			height:30px;
+			background-color:#ccc;
+		}
+		#topd{
+			width:1000px;
+			height:30px;
+			line-height:30px;
+			overflow:hidden;
+			position:relative;
+			left:250px;
+			display:inline-block;
+		}
+		#topd>img{
+			display:inline-block;
+			overflow:hidden;
+		}
+		#topp{
+			width:415px;
+			height:30px;
+			line-height:30px;
+			float:right;
+			position:relative;
+			right:0;
+			display:inline-block;
+			color:red;
+		}
+		#topdd{
+			margin-left:5px;
+			display:inline-block;
+			line-height:30px;
+			width:975px;
+			float:right;
+			overflow:hidden;
+		}
+	</style>
+</head>
+<body>
+	<div id="top">
+		<div id="topd"><img src="images/a15.png" alt="图片加载不出来吖"><div id="topdd"><p id="topp">[温馨提示]最近有不少不法分子在网上骗人，请大家注意!!!</p></div></div>
+	</div>
+	<div class="box" id="box">
+		<div class="slider" id="slider">
+			<div class="slide"><img src="images/b5.png" alt="没加载出来吖"></div>
+			<div class="slide"><img src="images/b1.png" alt="没加载出来吖"></div>
+			<div class="slide"><img src="images/b2.png" alt="没加载出来吖"></div>
+			<div class="slide"><img src="images/b3.png" alt="没加载出来吖"></div>
+			<div class="slide"><img src="images/b4.png" alt="没加载出来吖"></div>
+			<div class="slide"><img src="images/b5.png" alt="没加载出来吖"></div>
+			<div class="slide"><img src="images/b1.png" alt="没加载出来吖"></div>
+		</div>
+		<span id="left"> < </span>
+		<span id="right"> > </span>
+		<ul class="nav" id="nav">
+			<li class="active">1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+	</div>
+</body>
+<script src="js/animate.js"></script>
+<script>
+	var box = document.getElementById("box");
+	var slider = document.getElementById("slider");
+	var slideList = document.getElementsByClassName("slide");
+	var left = document.getElementById("left");
+	var right = document.getElementById("right");
+	var nav = document.getElementById("nav");
+	var navList = nav.children;
+	var index =1;
+	var judge = 0;
+	var topp = document.getElementById("topp");
+
+	box.onmouseout = function(){
+		animate(left,{opacity:50});
+		animate(right,{opacity:50});
+		timer = setInterval(next,3000);
+	}
+	box.onmouseover = function(){
+		animate(left,{opacity:0});
+		animate(right,{opacity:0});
+		clearInterval(timer);
+	}
+	right.onclick = next;
+	left.onclick = prev;
+	for(var i=0;i<navList.length;i++){
+		navList[i].index = i;
+		navList[i].onclick = function(){
+			index = this.index +1;
+			navmove();
+			animate(slider,{left:-1200*index});
+		}
+	}
+	function next(){
+		if(judge==1){
+			return 0;
+		}
+		judge = 1;
+		index +=1;
+		navmove();
+		animate(slider,{left:-1200*index},function(){
+			if(index == 6){
+				slider.style.left = '-1200px';
+				index = 1;
+			}
+			judge = 0;
+		});
+	}
+	function prev(){
+		if(judge == 1){
+			return 0;
+		}
+		judge = 1;
+		index -=1;
+		navmove();
+		animate(slider,{left:-1200*index},function(){
+			if(index == 0){
+				slider.style.left ='-6000px';
+				index = 5;
+			}
+			judge = 0;
+		});
+	}
+	function navmove(){
+		for(var i=0;i<navList.length;i++){
+			navList[i].className="";
+		}
+		if(index > 5){
+			navList[0].className = "active";
+		}
+		else if(index <=0){
+			navList[4].className = "active";
+		}
+		else{
+			navList[index-1].className = "active";
+		}
+	}
+	timer = setInterval(next,3000);
+	window.onload = function(){
+		setInterval(function(){
+			var now = parseInt(getStyle(topp,'right'));
+			topp.style.right = now +1+"px";
+			if(topp.style.right=='975px'){
+			topp.style.right='-415px';
+			console.log("eee");
+		}
+		},30);
+	}
+</script>
+</html>
